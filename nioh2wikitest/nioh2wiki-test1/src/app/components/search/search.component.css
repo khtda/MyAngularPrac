@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+ul.nav li a{border-left:1px solid #84B6D0;color:#8b8b86; }
+.navbar-toggler {
+    border-color: rgb(254, 254, 253);
+  } 
+
+::placeholder {
+  font-size: 14px;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.search {
+  position: absolute;
+  left: 10px;
+  top: 120px;
+  width: 50%;
+  float: left; 
+}
+
+.search-bar {
+  width: 50%;
+  height: 32px;
+  font-size: 20px;
+  border: 3px solid #3D1101;
+  background-color: #efe9e7;
+}
+
+.search-btn {
+  width: 36px;
+  height: 32px;
+  background-color: #3D1101;
+  color:#efe9e7;
+  outline:none;
+  border: 2px solid #3D1101;
+  cursor: pointer; 
+  position: absolute;
+  top: 0;
+  right: 1; 
+}
+

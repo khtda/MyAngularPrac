@@ -1,0 +1,23 @@
+<div class="detail-section">
+    <div class="container-fluid">
+  
+      <img src="{{ mission.image }}" class="img-fluid">
+  
+      <h1  class="oswald" style="color:white"> {{ mission.chapter }} -  {{ mission.name }}</h1>
+  
+      <hr>
+
+      <h3  class="oswald" style="color:bisque">Description</h3>
+      <p  class="sans-serif" style="color:white">{{ mission.description }}</p>
+  
+      <hr>
+  
+      <h2  class="oswald" style="color:bisque">Boss</h2>
+      <button class="oswald toYokai"  routerLink="/search/{{ mission.boss }}">{{ mission.boss }}</button>
+  
+ 
+      <button routerLink="/missions" class="oswald  return-btn" > Back to mission List</button>
+
+      
+    </div>
+  </div>

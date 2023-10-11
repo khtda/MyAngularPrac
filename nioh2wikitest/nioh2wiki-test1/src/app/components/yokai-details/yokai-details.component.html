@@ -1,0 +1,72 @@
+<div class="detail-section">
+  <div class="container-fluid">
+
+    <img src="{{ yokai.image }}" class="img-fluid">
+
+    <h1 class="oswald" style="color:white">{{ yokai.name }}</h1>
+
+    <hr>
+
+    <h3 class="oswald" style="color:bisque">Description</h3>
+    <p class="description" style="color:white">{{ yokai.description }}</p>
+
+    <hr>
+
+    <h2 class="oswald" style="color:bisque">Weakness</h2>
+    <p class="description" style="color:white">{{ yokai.weakness }}</p>
+
+    <hr>
+
+    <h2 class="oswald" style="color:whitesmoke">Message Board</h2>
+
+    <form [formGroup]="msgForm" *ngIf="isAuthenticated" (ngSubmit)="addMessage(msgForm)">
+
+      <div class="oswald" style="color:lightblue">
+        <label class="label-name"> {{ this.userFullName }}</label>
+      </div>
+
+      <div class="oswald">
+        <div class="form-group col-lg-6">
+          <textarea class="form-control" rows="3" formControlName="message" placeholder="Your comments..."></textarea>
+        </div>
+        <div *ngIf="msgForm.invalid && msgForm.dirty" class="alert alert-danger mt-1">
+          Your comment is invalid.
+        </div>
+      </div>
+
+      
+      <button class="submit-btn" type="submit">Send</button>
+      
+
+    </form>
+
+    <div *ngIf="!isAuthenticated" class="oswald not-member" style="color:lightblue">
+      *The message board only allows members to leave comments.
+    </div>
+
+    <div class="oswald" style="color:lightblue">
+      <button routerLink="/yokais" class="oswald return-btn"> Back to yokai List</button>
+    </div>
+
+
+
+    <div class="cursive messageDiv" *ngFor="let message of messages">
+
+      <p class="message">
+        <span>User:</span> {{ message.messageUser }}
+      </p>
+
+      <p class="message">
+        <span>Comment:</span> <br> {{ message.messageContent }}
+      </p>
+
+      <p class="mDate">
+        Date: {{ message.Date }}
+      </p>
+
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,19 @@
+#yokailist {
+  position: relative;
+  top: 120px;
+}
+
+#pagefooter {
+  position: relative;
+  text-align:center;
+  top:200px;
+  transform: translate(-30%);
+}
+
+.yokai h1 {
+  color: rgb(218, 213, 213);
+}
+
+.yokai:hover h1 {
+  color: rgb(255, 255, 255)
+}

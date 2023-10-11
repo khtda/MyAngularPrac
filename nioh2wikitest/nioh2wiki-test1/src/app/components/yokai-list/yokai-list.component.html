@@ -1,0 +1,61 @@
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div *ngFor="let tempYokai of yokais" class="col-md-3 yokai" id="yokailist">
+
+
+
+            <a routerLink="/yokais/{{ tempYokai.id }}">
+                <img src="{{ tempYokai.image }}" class="img-responsive img-fluid">
+            </a>
+
+            <a routerLink="/yokais/{{ tempYokai.id }}">
+                <h1  class="oswald yokai-name">{{ tempYokai.name }}</h1>
+            </a>
+
+
+
+        </div>
+
+        <!-- if yokais empty then display a message-->
+        <div *ngIf="yokais?.length == 0" class="alert alert-warning col-md-12" style="margin-top: 120px;" role="alert">
+            No yokais found.
+        </div>
+
+    </div>
+
+    <!-- paginate -->
+    <div id="pagefooter">
+        <div class="row">
+
+            <div class="col-md-6"></div>
+
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-9" style="padding-left: 30%">
+
+                        <ngb-pagination size="" [(page)]="thePageNumber" [pageSize]="thePageSize"
+                            [collectionSize]="theTotalElements" [maxSize]="3" [boundaryLinks]="true"
+                            (pageChange)="listYokais()">
+
+                        </ngb-pagination>
+
+                    </div>
+
+                    <div class="col-md-3 mt-2" style="text-align: right;">
+                        <span class="mr-2" style="color: white;"> Page Size　</span>
+
+                        <select #myPageSelect (change)="updatePageSize(myPageSelect.value)">
+                            <option selected="true">12</option>
+                            <option>24</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div> 
+
+</div>

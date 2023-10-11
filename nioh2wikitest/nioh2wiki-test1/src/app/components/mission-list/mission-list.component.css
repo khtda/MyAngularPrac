@@ -1,0 +1,87 @@
+#missionlist {
+    position: relative;
+    left: 0.1em;
+}
+
+.detail-section {
+    margin-top: 60px
+}
+
+span {
+    background-color: rgb(6, 6, 6);
+    color: rgb(140, 217, 204);
+    border : 1px solid #e1e1e8;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.missions{
+    font-size: 1.5em;
+    color: bisque;
+    cursor: pointer;
+    border: solid rgba(107, 242, 215, 0.753) 1px;
+    align-content: center;
+    padding: 15px;
+}
+
+.missions:hover {
+    color:rgb(255, 255, 255);
+
+  }
+
+button {
+    color: gray;
+}
+
+.buttonBox {
+    margin-bottom: 20px;
+}
+
+
+
+/* CSS */
+.button-68 {
+  width: 170px;
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #18181a;
+  border-radius: 8px;
+  border-style: none;
+  margin-right: 15px;
+  box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+  box-sizing: border-box;
+  color: #b5b4b4;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 13px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+  margin-top: 5px;
+}
+
+.button-68:hover {
+  color:aliceblue;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+.button-68:active {
+  transform: translateY(2px);
+  transition-duration: .35s;
+}

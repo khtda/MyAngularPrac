@@ -1,0 +1,23 @@
+<div class="detail-section">
+    <div class="container-fluid">
+        <div class="buttonBox">
+            <button class="button-68" style="border: solid whitesmoke 1px; width:250px" routerLink="/missions">Show all missions</button>
+        </div>
+        <div class="buttonBox">
+            <button class="button-68" (click)="chapterSearch('Awakening')"> Awakening </button>
+            <button class="button-68" (click)="chapterSearch('Soaring')">Soaring</button>
+            <button class="button-68" (click)="chapterSearch('Shadow')">Shadow</button>
+            <button class="button-68" (click)="chapterSearch('Dawn')">Dawn</button>
+            <button class="button-68" (click)="chapterSearch('Twilight')">Twilight</button>
+            <button class="button-68" (click)="chapterSearch('Dream')">Dream</button>
+            <button class="button-68" (click)="chapterSearch('Afterglow')">Afterglow</button>
+        </div>
+
+        <div id="missionlist">
+            <div class="missions" *ngFor="let tempMission of missions" routerLink="/missions/{{ tempMission.id }}">
+                <span> {{ tempMission.chapter }} </span> &nbsp; {{ tempMission.name }}
+
+            </div>
+        </div>
+    </div>
+</div>
