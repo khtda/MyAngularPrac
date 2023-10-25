@@ -35,6 +35,7 @@
     "@angular/cli": "^14.2.12",
     "@angular/compiler-cli": "^14.0.0",
     "@angular/localize": "^14.1.2",
+    "@babel/traverse": "^7.23.2",
     "@types/jasmine": "~4.0.0",
     "@types/lodash": "^4.14.199",
     "jasmine-core": "~4.1.0",
