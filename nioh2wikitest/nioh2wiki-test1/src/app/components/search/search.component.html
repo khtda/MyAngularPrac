@@ -1,38 +1,36 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="/assets/images/backgrounds/logo5_new.jpg" alt="" width="70" height="70">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon  navbar-dark"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="nav navbar-nav me-auto mb-2 mb-lg-0" >
-        <li class="nav-item" >
-          <a class="nav-link active"   routerLink="/yokais">Yokais</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active"   routerLink="/missions">Missions</a>
-        </li>
-        <li class="nav-item login">
-          <app-login-status></app-login-status>
-        </li>
-      </ul>
-      <form class="d-flex  bd-highlight">
-        <input #myInput type="text" 
-             class="search-bar"
-             name="search" 
-             id="search" 
-             placeholder="輸入妖怪名稱"
-             (input)="searchDebounced(myInput.value)"
-             (keyup.enter)="doSearch(myInput.value)"   />
-             <button (click)="doSearch(myInput.value)" class="btn btn-outline-success">
-              <i class="fas fa-search"></i>
-            </button>
-      </form>
+<div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/images/backgrounds/logo5_new.jpg" alt="" width="70" height="70">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon  navbar-dark"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/yokais">Yokais</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/missions">Missions</a>
+          </li>
+          <li class="nav-item login">
+            <app-login-status></app-login-status>
+          </li>
+        </ul>
+        <form class="d-flex  bd-highlight">
+          <input #myInput type="text" class="search-bar" name="search" id="search" placeholder="輸入妖怪名稱"
+            (input)="searchDebounced(myInput.value)" (keyup.enter)="doSearch(myInput.value)" />
+          <button (click)="doSearch(myInput.value)" class="btn btn-outline-success">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</div>
 
 
 <!--
